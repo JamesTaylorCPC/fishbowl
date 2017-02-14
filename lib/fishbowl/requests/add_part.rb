@@ -3,7 +3,7 @@ module Fishbowl::Requests
     options = options.symbolize_keys
 
     request = format_add_part_request(options)
-    Fishbowl::Objects::BaseObject.new.send_request(request, 'AddInventoryRs')
+    Fishbowl::Objects::BaseObject.new.send_request(request, 'ImportRs')
   end
 
 private
