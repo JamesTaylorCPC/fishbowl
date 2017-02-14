@@ -13,7 +13,7 @@ module Fishbowl::Errors
   end
 
   def self.get_status(code)
-    status_codes = YAML.load_file('./lib/status_codes.yml')['codes']
+    status_codes = YAML.load_file('../status_codes.yml')['codes']
     status_codes[code]['message']
   end
 end
