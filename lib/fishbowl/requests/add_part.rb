@@ -14,7 +14,7 @@ private
         xml.ImportRq {
           xml.Type 'ImportPart'
           xml.Rows {
-            xml.Row '"FOO-1001","The First Foo","","ea","Inventory","","","","","","","","","","","","","","","","",""'
+            xml.Row '"FOO-1001","The First Foo","","ea","","Inventory","","","","","","","","","","","","","","","",""'
           }
         }
       }
