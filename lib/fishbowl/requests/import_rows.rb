@@ -1,5 +1,5 @@
 module Fishbowl::Requests
-  def self.add_part(options = {})
+  def self.import_rows(options = {})
     options = options.symbolize_keys
 
     request = format_add_part_request(options)
@@ -12,9 +12,11 @@ private
     Nokogiri::XML::Builder.new do |xml|
       xml.request {
         xml.ImportRq {
-          xml.Type 'ImportPart'
+          xml.Type options[:type]
           xml.Rows {
-            xml.Row '"FOO-1001","The First Foo","","ea","","Inventory","","","","","","","","","","","","","","","",""'
+            options[:rows].each do |r|
+              xml.Row r
+            end
           }
         }
       }
